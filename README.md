@@ -103,13 +103,9 @@ Now that you're more familiar with your Bitbucket repository, go ahead and add a
 
 ---
 
-## PICTURE
 
-![image](file:///home/oo/Desktop/GIT001/explanation.jpg)
-
-
-#Домашнее задание GIT
+# Домашнее задание GIT
 
 ### Задание №0
 
-![image](https://github.com/m65v19/git_task_01/blob/master/docs/mynameandemail.png)
+![image](docs/mynameandemail.png)
