@@ -106,6 +106,63 @@ Now that you're more familiar with your Bitbucket repository, go ahead and add a
 
 # Домашнее задание GIT
 
+#### Адрес репозитория: [https://github.com/m65v19/git_task_01/](https://github.com/m65v19/git_task_01/) ####
+
 ### Задание №0
 
-![image](docs/mynameandemail.png)
+![Результат](docs/mynameandemail.png "Уже сконфигурировано")
+
+### Задание №1
+
+![Часть1](docs/01-k.png "Всё не влезло, прошу прощения")
+![Часть2](docs/02-k.png "Всё не влезло, прошу прощения")
+
+***Pull Request №1*** [https://github.com/m65v19/git_task_01/pull/1](https://github.com/m65v19/git_task_01/pull/1)
+
+***Pull Request №2*** [https://github.com/m65v19/git_task_01/pull/2](https://github.com/m65v19/git_task_01/pull/2)
+
+---
+Отвечая на доп. вопрос ***"Какие операции нужно совершить, если не использовать Pull Request (полный
+набор команд от начала и до конца)?"***
+
+Ответ: Можно переключиться на ветку Main и сделать merge изменений:
+```bash
+git checkout main
+git merge 
+task1-name 
+git push
+```
+
+### Задание №2
+
+![Часть1](docs/01-k2.png "Всё не влезло, прошу прощения")
+![Часть2](docs/02-k2.png "Всё не влезло, прошу прощения")
+
+***Beтвь №1*** [https://github.com/m65v19/git_task_01/tree/task2-klimin](https://github.com/m65v19/git_task_01/tree/task2-klimin)
+
+***Beтвь №2*** [https://github.com/m65v19/git_task_01/tree/task2-ovakimyan](https://github.com/m65v19/git_task_01/tree/task2-ovakimyan)
+
+---
+Отвечая на вопросы 
+1. ***Объяснить почему не удалось запушить ветку***
+
+![pic1](docs/merge%20conflict.png)
+
+Контекст: Перед пушем ветви, было необходимо совершить сл. шаги:
+1. Создать свою ветку, сделать ***commit*** с новым файлом и совершить ***push***
+2. ***checkout*** на ветвь ***main***, ***commit*** и ***push*** любого изменения
+3. Вернуться на свою ветвь и выполнить ***rebase*** от ветви ***main***
+
+Процедура ***rebase*** представляет из себя операцию накладывания найденных коммитов поверх других.
+В данном случае мы ответвились от основной ветви ***main*** и от последнего на тот момент коммита продолжили работу в новой ветке ***new-branch***.
+При этом же, совершили изменения в ***main*** уже после разветвления, соответственно ***main*** уже указывала на новый коммит. Локальный ***main*** не совпадал с указателем в удалённом репозитории.
+
+![explanation](docs/explanation.jpg "Не лучший рисунок, но всё же")
+
+
+Код в локальном репозитории оказался несовместим с кодом в удалённом репозитории.
+
+
+
+
+    
